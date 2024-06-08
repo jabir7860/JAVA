@@ -1,0 +1,36 @@
+import java.util.*;
+public class Main
+{
+    public static void fun(ArrayList<Integer>arr) 
+    {
+        for(int i=0;i<arr.size();i++) 
+        {
+            System.out.print(arr.get(i)+" "); 
+        }
+    }
+	public static void main(String[] args) {
+		// Its is like a vector in C++; 
+		Scanner Sc=new Scanner(System.in); 
+		ArrayList<Integer>arr=new ArrayList<Integer>();
+		int n=Sc.nextInt(); 
+		for(int i=0;i<n;i++) 
+		{
+		    int temp=Sc.nextInt(); 
+		    arr.add(i,temp); 
+		}
+		fun(arr); 
+		System.out.println();
+		arr.add(10); 
+		fun(arr); 
+		System.out.println();
+		arr.set(0,1000); 
+		fun(arr); 
+		System.out.println();
+		arr.remove(1);
+		fun(arr); 
+		System.out.println();
+		Collections.sort(arr); 
+		fun(arr); 
+		System.out.println();
+	}
+}
