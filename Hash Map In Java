@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+    public static void fun(ArrayList<Integer>arr) 
+    {
+        for(int i=0;i<arr.size();i++) 
+        {
+            System.out.print(arr.get(i)+" "); 
+        }
+    }
+	public static void main(String[] args) {
+		Scanner Sc=new Scanner(System.in); 
+		HashMap<String,Integer>H=new HashMap<String,Integer>(); 
+		ArrayList<String>arr=new ArrayList<String>(); 
+		arr.add("JABIR"); 
+		arr.add("JABIR"); 
+		arr.add("RAHIM"); 
+		arr.add("FAROOK"); 
+		arr.add("GAFOOR"); 
+		for(String i:arr) 
+		{
+		    H.put(i,H.getOrDefault(i,0)+1); 
+		}
+		for(String i:H.keySet()) 
+		{
+		    System.out.print(i+":"+H.get(i)); 
+		}
+	}
+}
